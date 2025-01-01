@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BryanOfficialStore</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sticky Header Section -->
+    <header class="header">
+        <div class="logo">
+            <img src="images/logo2.png" alt="Logo">
+        </div>
+        <div class="tagline">
+            <p>Tempat topup paling murah dan terpercaya ya cuma disini!</p>
+        </div>
+    </header>
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="banner-content">
+            <p>Promo Spesial! Dapatkan Diskon 20% untuk Pembelian Pertama Anda. Cek Sekarang!</p>
+        </div>
+    </section>
+    <!-- Best Sellers Section -->
+    <section class="best-sellers">
+        <h2>Best Sellers</h2>
+        <div class="game-list">
+            <div class="game-item" onclick="openForm('Mobile Legends Indonesia')">
+                <img src="images/mobile legends.jpg" alt="Mobile Legends Indonesia">
+                <p>Mobile Legends Indonesia</p>
+            </div>
+            <div class="game-item" onclick="openForm('Weekly Diamond Pass')">
+                <img src="images/wdp2.jpg" alt="Weekly Diamond Pass">
+                <p>Weekly Diamond Pass</p>
+            </div>
+            <div class="game-item" onclick="openForm('Mobile Legends Global')">
+                <img src="images/fanny.png" alt="Mobile Legends Global">
+                <p>Mobile Legends Global</p>
+            </div>
+            <div class="game-item" onclick="openForm('Honor of Kings')">
+                <img src="images/jing.png" alt="Honor of Kings">
+                <p>Honor of Kings</p>
+            </div>
+            <div class="game-item" onclick="openForm('Free Fire')">
+                <img src="images/ff.jpg" alt="Free Fire">
+                <p>Free Fire</p>
+            </div>
+            <div class="game-item" onclick="openForm('PUBG')">
+                <img src="images/pubg.png" alt="PUBG">
+                <p>PUBG</p>
+            </div>
+            <div class="game-item" onclick="openForm('Z-Z-Z')">
+                <img src="images/zzz.png" alt="Z-Z-Z">
+                <p>Z-Z-Z</p>
+            </div>
+            <div class="game-item" onclick="openForm('Genshin Impact')">
+                <img src="images/genshin.png" alt="Genshin Impact">
+                <p>Genshin Impact</p>
+            </div>
+            <div class="game-item" onclick="openForm('Zepeto')">
+                <img src="images/zepeto.png" alt="Zepeto">
+                <p>Zepeto</p>
+            </div>
+            <div class="game-item" onclick="openForm('Honkai Star Rail')">
+                <img src="images/honkai.png" alt="Honkai Star Rail">
+                <p>Honkai Star Rail</p>
+            </div>
+            <div class="game-item" onclick="openForm('Project Bloodstrike')">
+                <img src="images/blood strike.png" alt="Project Bloodstrike">
+                <p>Project Bloodstrike</p>
+            </div>
+            <div class="game-item" onclick="openForm('FC Mobile')">
+                <img src="images/fc mobile.png" alt="FC Mobile">
+                <p>FC Mobile</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section (Initially hidden) -->
+    <section id="form-section" class="form-section">
+        <div class="form-container">
+            <!-- Tombol Tutup -->
+            <button class="close-btn" onclick="closeForm()">X</button>
+    
+            <h2>Top Up <span id="game-name">Nama Game</span></h2>
+    
+            <form action="#" method="post">
+                <!-- Frame Player ID -->
+                <div class="frame">
+                    <label for="player-id">Masukkan Player ID:</label>
+                    <input type="text" id="player-id" name="player-id" placeholder="Player ID" required>
+                </div>
+
+                <!-- Frame Diamond -->
+                <div class="frame">
+                    <label for="diamond">Pilih Diamond:</label>
+                    <input type="number" id="diamond" name="diamond" placeholder="Jumlah Diamond" required>
+                </div>
+
+                <!-- Opsi Nominal (Tanpa ikon bulat) -->
+                <label for="nominal">Pilih Nominal Topup:</label>
+                    <div class="nominal-options">
+                        <label><input type="radio" name="nominal" value="10 Diamond"> 10 Diamond</label>
+                        <label><input type="radio" name="nominal" value="20 Diamond"> 20 Diamond</label>
+                        <label><input type="radio" name="nominal" value="30 Diamond"> 30 Diamond</label>
+                        <label><input type="radio" name="nominal" value="40 Diamond"> 40 Diamond</label>
+                        <label><input type="radio" name="nominal" value="50 Diamond"> 50 Diamond</label>
+                        <label><input type="radio" name="nominal" value="60 Diamond"> 60 Diamond</label>
+                        <label><input type="radio" name="nominal" value="70 Diamond"> 70 Diamond</label>
+                        <label><input type="radio" name="nominal" value="80 Diamond"> 80 Diamond</label>
+                        <label><input type="radio" name="nominal" value="90 Diamond"> 90 Diamond</label>
+                        <label><input type="radio" name="nominal" value="100 Diamond"> 100 Diamond</label>
+                        <label><input type="radio" name="nominal" value="110 Diamond"> 110 Diamond</label>
+                        <label><input type="radio" name="nominal" value="120 Diamond"> 120 Diamond</label>
+                    </div>
+          
+                <label for="payment-method">Metode Pembayaran:</label>
+                <select id="payment-method" name="payment-method">
+                    <option value="qris">QRIS</option>
+                    <option value="e-wallet">E-Wallet</option>
+                    <option value="virtual-account">Virtual Account</option>
+                </select>
+                
+                <button type="submit">Konfirmasi Topup</button>
+            </form>
+        </div>
+    </section>
+
+         <!-- Notifikasi (Initially hidden) -->
+<div id="notification" class="notification">
+    <p>Terimakasih, pesanan Anda telah berhasil!</p>
+</div>
+
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Deskripsi Website -->
+            <p class="website-description">Top Up Game Favorit Kamu di Bryan Official Store dengan pengiriman cepat dan aman. Nikmati metode pembayaran lengkap untuk game populer seperti Mobile Legends, PUBG Mobile, Valorant, FC Mobile, Free Fire, Genshin Impact, dan masih banyak lagi. Bryan Official Store adalah solusi terbaik untuk kebutuhan top up game kamu!</p>
+            <p>&copy; 2024 Tempat Topup Paling Murah. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="images/ig.png" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="images/fb.png" alt="Facebook">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="images/x.png" alt="Twitter">
+                </a>
+                <a href="https://www.youtube.com" target="_blank">
+                    <img src="images/yt.png" alt="YouTube">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
